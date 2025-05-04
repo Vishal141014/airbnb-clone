@@ -4,8 +4,17 @@ import Link from 'next/link';
 import { FiGlobe } from 'react-icons/fi';
 import { FaFacebookF, FaTwitter, FaInstagram } from 'react-icons/fa';
 
+type FooterLink = {
+  name: string;
+  href: string;
+};
+
+type FooterLinks = {
+  [key: string]: FooterLink[];
+};
+
 const Footer = () => {
-  const footerLinks = {
+  const footerLinks: FooterLinks = {
     'Support': [
       { name: 'Help Center', href: '#' },
       { name: 'AirCover', href: '#' },

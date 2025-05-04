@@ -160,7 +160,9 @@ const InspirationCarousel = () => {
         {destinations.map((destination, index) => (
           <motion.div
             key={destination.id}
-            ref={el => slideRefs.current[index] = el}
+            ref={(el) => {
+              slideRefs.current[index] = el;
+            }}
             className={`absolute inset-0 ${
               index === currentSlide ? 'z-10' : 'z-0'
             }`}
